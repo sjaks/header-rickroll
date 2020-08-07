@@ -1,0 +1,19 @@
+{
+  "name": "header-rickroll",
+  "version": "1.0.0",
+  "description": "Rickrolling with HTTP headers",
+  "main": "rickroll.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjaks/header-rickroll.git"
+  },
+  "author": "sjaks@github",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/sjaks/header-rickroll/issues"
+  },
+  "homepage": "https://github.com/sjaks/header-rickroll#readme"
+}
