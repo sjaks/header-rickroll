@@ -7,9 +7,9 @@ Rickroll your friends with `curl -IL https://jaks.fi/hrr`.
 Clone and install
 ```
 sudo apt install nodejs npm
-npm install -g pm2
+sudo npm install -g pm2
 git clone https://github.com/sjaks/header-rickroll
 cd header-rickroll
-pm2 start rickroll
+pm2 start rickroll.js
 ```
 The server is now listening at http://localhost:6789.
