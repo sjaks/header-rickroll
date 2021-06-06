@@ -1,13 +1,6 @@
 /*
-      _       _
- ___ (_) __ _| | _____  sjaks@github
-/ __|| |/ _` | |/ / __| jaks.fi
-\__ \| | (_| |   <\__ \ ------------
-|___// |\__,_|_|\_\___/ header-rickroll
-   |__/
-
-BRIEF:
-Rickroll in HTTP headers
+header-rickroll
+sjaks@github.com
 */
 
 var http = require('http');
@@ -21,7 +14,7 @@ var inc = 12;
 
 http.createServer(function (req, res) {
     if (req.headers['user-agent'].indexOf("curl") < 0) {
-        res.write("Please run $curl --max-redirs -1 -IL http://jaks.fi/hrr");
+        res.write("$ curl --max-redirs -1 -IL http://jaks.fi/hrr");
         res.end();
         return;
     }
