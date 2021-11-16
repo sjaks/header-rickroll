@@ -1,5 +1,5 @@
 ## Rickrolling with HTTP headers
-Rickroll your friends with `curl -IL https://jaks.fi/hrr`.
+Rickroll your friends with `curl -IL https://sjaks.dy.fi/hrr`.
 
 ![](https://i.imgur.com/kF7CXq7.gif)
 

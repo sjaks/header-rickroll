@@ -14,7 +14,7 @@ var inc = 12;
 
 http.createServer(function (req, res) {
     if (req.headers['user-agent'].indexOf("curl") < 0) {
-        res.write("$ curl --max-redirs -1 -IL http://jaks.fi/hrr");
+        res.write("$ curl --max-redirs -1 -IL https://sjaks.dy.fi/hrr");
         res.end();
         return;
     }
@@ -30,7 +30,7 @@ http.createServer(function (req, res) {
 
     setTimeout(function() {
         res.writeHead(301, {
-            Location: "https://jaks.fi/hrr"
+            Location: "https://sjaks.dy.fi/hrr"
         });
 
         res.end();
