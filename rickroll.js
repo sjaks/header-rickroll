@@ -9,9 +9,10 @@ let fs = require('fs');
 // Load movie file and init frames,
 // the height of one frame is 12 lines in the .txt file
 let movie = fs.readFileSync("movie.txt").toString().split("\n");
+let attributes = "ABCDEFGHIJKL";
 let frame = 0;
 let inc = 12;
-let attributes = "ABCDEFGHIJKL";
+let width = 61;
 
 
 http.createServer(function (req, res) {
@@ -30,7 +31,9 @@ http.createServer(function (req, res) {
     // Format the animation into  HTTP headers
     for (let i = 0; i < inc; i++) {
         let headerAttribute = "X-" + attributes.charAt(i);
-        res.setHeader(headerAttribute, "'" +  movie[frame + i].replace(/\r?\n|\r/g, " ") + "'");
+        let line = movie[frame + i].replace(/\r?\n|\r/g, " ");
+        let tailFiller = " ".repeat(width - line.length)
+        res.setHeader(headerAttribute, "'" + line + tailFiller + "'");
     }
 
     frame += (inc + 1);
