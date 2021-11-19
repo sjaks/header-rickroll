@@ -6,8 +6,7 @@ sjaks@github.com
 let http = require('http');
 let fs = require('fs');
 
-// Load movie file and init frames,
-// the height of one frame is 12 lines in the .txt file
+let domain = "https://sjaks.dy.fi";
 let movie = fs.readFileSync("movie.txt").toString().split("\n");
 let attributes = "ABCDEFGHIJKL";
 let frame = 0;
@@ -19,7 +18,7 @@ http.createServer(function (req, res) {
     if (req.headers['user-agent'].indexOf("curl") < 0) {
         // If the requester is not cURL, prompt the visitor to access this
         // app via cURL. --max-redirs -1 allows infinite redirects
-        res.write("$ curl --max-redirs -1 -IL " + req.headers.host + req.url);
+        res.write("$ curl --max-redirs -1 -IL " + domain + req.url);
         res.end();
         return;
     }
