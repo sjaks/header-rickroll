@@ -6,7 +6,7 @@ sjaks@github.com
 let http = require('http');
 let fs = require('fs');
 
-let domain = "https://sjaks.dy.fi";
+let domain = "https://sjaks.iki.fi";
 let movie = fs.readFileSync("movie.txt").toString().split("\n");
 let attributes = "ABCDEFGHIJKL";
 let frame = 0;
